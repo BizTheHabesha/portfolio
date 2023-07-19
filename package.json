@@ -6,6 +6,7 @@
   "author": "BizTheHabesha",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "bootstrap": "^5.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "5.0.1"
