@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Alert } from "react-bootstrap";
 
 function Contact() {
 	return (
@@ -7,3 +8,5 @@ function Contact() {
 		</section>
 	);
 }
+
+export default Contact;
