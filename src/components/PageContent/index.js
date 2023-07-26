@@ -1,7 +1,8 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const PageContent = (props) => {
-	return <div>{props.children}</div>;
+	return <Container>{props.children}</Container>;
 };
 
 export default PageContent;

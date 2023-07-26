@@ -1,87 +1,75 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { capitalize } from "../../utils/helpers";
 
-function Nav() {
+function BSNav(props) {
+	const { pages = [], setCurrentPage, currentPage } = props;
+
+	useEffect(() => {
+		document.title = capitalize(currentPage.name);
+	}, [currentPage]);
+
 	return (
-		<nav className="navbar navbar-expand-lg bg-body-secondary mb-4">
-			<div className="container-fluid">
-				<a className="navbar-brand" href="/">
-					<img src="%PUBLIC_URL%/logo64.png" alt="" />
-				</a>
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent "
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span className="navbar-toggler-icon"></span>
-				</button>
-				<div
-					className="collapse navbar-collapse"
-					id="navbarSupportedContent">
-					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-						<li className="nav-item">
-							<a
-								className="nav-link"
-								aria-current="page"
-								href="/">
-								Home
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="/dashboard">
-								Dashboard
-							</a>
-						</li>
-						<li className="nav-item dropdown">
-							<a
-								className="nav-link dropdown-toggle"
-								href="#"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false">
-								Feedback
-							</a>
-							<ul className="dropdown-menu">
-								<li>
-									<a
-										className="dropdown-item"
-										href="https://github.com/BizTheHabesha/Tech-Blog/issues/new">
-										Report an issue
-									</a>
-								</li>
-								<li>
-									<a
-										className="dropdown-item"
-										href="https://github.com/BizTheHabesha/Tech-Blog">
-										Contribute
-									</a>
-								</li>
-								<li>
-									<hr className="dropdown-divider" />
-								</li>
-								<li>
-									<a
-										className="dropdown-item"
-										href="https://opensource.com/resources/what-open-source">
-										What's open source?
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li className="nav-item">
-							<a
-								className="nav-link text-primary"
-								href="/newpost/">
-								Post something new!
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<Navbar
+			expand="lg"
+			className="bg-body-tertiary mx-auto justify-content-center fixed-top">
+			<Container>
+				<Navbar.Brand
+					className={`navbar-brand ${
+						currentPage.name === "home" && "actve"
+					}`}
+					onClick={() => setCurrentPage(pages[0])}>
+					<img
+						alt="logo"
+						src="img/logo64.png"
+						width="30"
+						height="30"
+						className="d-inline-bock align-top toggle-dark-mode"
+					/>{" "}
+					Portfolio
+				</Navbar.Brand>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Collapse id="basic-navbar-nav ">
+					<Nav className="me-auto">
+						{pages.map((Page) => {
+							if (Page.name !== "home")
+								return (
+									<Nav.Link
+										className={`${
+											currentPage.name === Page.name &&
+											"active"
+										}`}
+										onClick={() => setCurrentPage(Page)}>
+										{capitalize(Page.name)}
+									</Nav.Link>
+								);
+						})}
+						<NavDropdown title="Feedback" id="basic-nav-dropdown">
+							<NavDropdown.Item
+								href="https://github.com/BizTheHabesha/portfolio/labels/enhancement"
+								target="_blank">
+								See what's next!
+							</NavDropdown.Item>
+							<NavDropdown.Item
+								href="https://github.com/BizTheHabesha/portfolio/issues/new"
+								target="_blank">
+								Report Issues/Suggestions
+							</NavDropdown.Item>
+							<NavDropdown.Divider />
+							<NavDropdown.Item
+								href="https://opensource.com/resources/what-open-source"
+								target="_blank">
+								What's Open Source?
+							</NavDropdown.Item>
+						</NavDropdown>
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
 	);
 }
 
-export default Nav;
+export default BSNav;
