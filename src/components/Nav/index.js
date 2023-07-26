@@ -3,10 +3,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { capitalize } from "../../utils/helpers";
+import { capitalize, uuid } from "../../utils/helpers";
 
 function BSNav(props) {
 	const { pages = [], setCurrentPage, currentPage } = props;
+	const ldmode = document.getElementById("nilfirst").dataset["bsTheme"];
 
 	useEffect(() => {
 		document.title = capitalize(currentPage.name);
@@ -27,7 +28,10 @@ function BSNav(props) {
 						src="img/logo64.png"
 						width="30"
 						height="30"
-						className="d-inline-bock align-top toggle-dark-mode"
+						className={`${
+							ldmode === "dark" ? "toggle-dark-mode" : ""
+						}d-inline-bock align-top`}
+						// use a space here to seperate the logo from the text
 					/>{" "}
 					Portfolio
 				</Navbar.Brand>
@@ -38,6 +42,7 @@ function BSNav(props) {
 							if (Page.name !== "home")
 								return (
 									<Nav.Link
+										key={uuid()}
 										className={`${
 											currentPage.name === Page.name &&
 											"active"

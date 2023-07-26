@@ -1,14 +1,14 @@
 import React from "react";
-import * as RawProjects from "../Project";
+import RawProjects from "../Project";
+import { uuid } from "../../utils/helpers";
+import { Container, Stack } from "react-bootstrap";
 
 function Projects() {
-	return <h1>Projects</h1>;
-	//wip
-	{
-		return Object.keys(RawProjects).forEach((projectName) => {
-			return RawProjects[projectName];
-		});
-	}
+	return (
+		<Stack className="pt-4" direction="horizontal" gap={3}>
+			{RawProjects.map((el) => el({ key: uuid() }))}
+		</Stack>
+	);
 }
 
 export default Projects;

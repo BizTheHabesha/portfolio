@@ -1,7 +1,7 @@
 import React from "react";
 
-function Project() {
-	return <h1>Employee Tracker</h1>;
+function Project(props) {
+	return <h1 key={props.key}>Employee Tracker</h1>;
 }
 
 export { Project };
