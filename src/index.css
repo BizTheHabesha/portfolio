@@ -5,3 +5,6 @@
 .navbar-brand {
 	cursor: pointer;
 }
+.badge-stack-ovf {
+	scrollbar-width: thin;
+}

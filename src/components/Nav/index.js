@@ -30,7 +30,7 @@ function BSNav(props) {
 						height="30"
 						className={`${
 							ldmode === "dark" ? "toggle-dark-mode" : ""
-						}d-inline-bock align-top`}
+						} d-inline-bock align-top`}
 						// use a space here to seperate the logo from the text
 					/>{" "}
 					Portfolio
