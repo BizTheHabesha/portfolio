@@ -6,19 +6,19 @@ import { uuid } from "../../utils/helpers";
 function Project(props) {
 	return (
 		<ProjectContent
+			featured
 			active
 			key={uuid()}
-			github="https://github.com/BizTheHabesha/Tech-Blog"
-			deploy="https://tech-blog-bizthehabesha.herokuapp.com/"
-			badges={["Active", "SEHN", "Handlebars", "Express", "MySQL"]}
-			img="img/tech-blog-preview.ico">
+			github="https://github.com/BizTheHabesha/lokaj"
+			badges={["WIP", "MERN", "React", "Express", "MongoDB"]}
+			img="https://placehold.co/256x256">
 			<Card.Body>
 				<Card.Title>
-					Tech Blog <Badge bg="info">New</Badge>{" "}
+					Lokaj Valet <Badge bg="info">New</Badge>{" "}
 				</Card.Title>
 				<Card.Text>
-					Full stack web application where users can create accounts
-					and upload and blog posts.
+					A valet managment and tracking system that can be used with
+					many garages and many cars.
 				</Card.Text>
 			</Card.Body>
 		</ProjectContent>

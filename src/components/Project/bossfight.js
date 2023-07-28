@@ -8,15 +8,15 @@ function Project(props) {
 		<ProjectContent
 			active
 			key={uuid()}
-			github="https://github.com/BizTheHabesha/Tech-Blog"
-			showcase="https://tech-blog-bizthehabesha.herokuapp.com/"
-			badges={["Available", "Express", "MySQL"]}
-			img="img/social-media-api-preview.png">
+			github="https://github.com/BizTheHabesha/group-6-project-1"
+			deploy="https://bizthehabesha.github.io/group-6-project-1/"
+			badges={["Deprecated", "jQuery"]}
+			img="img/bossfight-preview.png">
 			<Card.Body>
-				<Card.Title>Employee Tracker</Card.Title>
+				<Card.Title>Boss Fight!</Card.Title>
 				<Card.Text>
-					A database API for storing employees, roles, departments,
-					and managers plus some utilities{" "}
+					A small game where users can pit their favorite bosses from
+					fiction against one another.
 				</Card.Text>
 			</Card.Body>
 		</ProjectContent>
