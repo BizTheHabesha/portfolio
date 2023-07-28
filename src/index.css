@@ -8,3 +8,20 @@
 .badge-stack-ovf {
 	scrollbar-width: thin;
 }
+.badge-stack-ovf::-webkit-scrollbar {
+	width: 5px;
+	height: 8px;
+	background-color: #aaa; /* or add it to the track */
+}
+.project-card {
+	transition: all 0.3s ease-in-out;
+	border-style: inset;
+}
+.project-card:hover {
+	transform: scale(1.03);
+	border-radius: 5px;
+	border-color: #aaa;
+}
+.project-card-img {
+	object-fit: cover;
+}
