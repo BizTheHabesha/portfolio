@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Accordion,
 	Container,
@@ -169,8 +169,13 @@ function Resume(props) {
 
 				<Accordion.Item eventKey="2">
 					<Accordion.Header>Projects</Accordion.Header>
-					<Accordion.Body className="d-flex">
-						<Button variant="secondary">
+					<Accordion.Body className="d-flex justify-content-center">
+						<Button
+							className="m-4"
+							variant="secondary"
+							onClick={() =>
+								setCurrentPage({ name: "projects" })
+							}>
 							<RiArrowGoBackFill /> Projects Tab
 						</Button>
 					</Accordion.Body>
