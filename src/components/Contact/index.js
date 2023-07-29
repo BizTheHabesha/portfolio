@@ -3,9 +3,9 @@ import { Alert, Button, Col, FloatingLabel, Form, Row } from "react-bootstrap";
 
 function Contact() {
 	return (
-		<section class="mb-4">
-			<h2 class="font-weight-bold text-center my-4">Contact Me</h2>
-			<p class="text-center w-resposnive mx-auto mb-5">
+		<section className="mb-4">
+			<h2 className="font-weight-bold text-center my-4">Contact Me</h2>
+			<p className="text-center w-resposnive mx-auto mb-5">
 				Questions? Inquiries? Leave your email, name, and a short,
 				descriptive message and I'll get back to you.
 			</p>
