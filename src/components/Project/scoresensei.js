@@ -10,7 +10,7 @@ function Project(props) {
 			key={uuid()}
 			github="https://github.com/BizTheHabesha/group-1-project-2"
 			deploy="https://group-1-project-2.herokuapp.com/login"
-			badges={["Inactive", "Express", "MySQL", "Bootstrap"]}
+			badges={["Inactive", "SEHN", "Express", "MySQL", "Bootstrap"]}
 			img="img/miyagilg.ico">
 			<Card.Body>
 				<Card.Title>ScoreSensei</Card.Title>
