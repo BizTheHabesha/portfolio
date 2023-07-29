@@ -1,13 +1,12 @@
 import React from "react";
 import PageContent from "../PageContent";
 import { capitalize } from "../../utils/helpers";
-import Home from "../Home";
 import Projects from "../Projects";
 import About from "../About";
 import Contact from "../Contact";
 import Resume from "../Resume";
 
-function Page({ currentPage }) {
+function Page({ currentPage, setCurrentPage }) {
 	const renderPage = () => {
 		switch (currentPage.name) {
 			case "home":
@@ -19,7 +18,7 @@ function Page({ currentPage }) {
 			case "contact":
 				return <Contact />;
 			case "resume":
-				return <Resume />;
+				return <Resume setCurrentPage={setCurrentPage} />;
 		}
 	};
 	return <PageContent>{renderPage()}</PageContent>;

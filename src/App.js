@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 	const [pages] = useState([
-		{ name: "home" },
 		{ name: "projects" },
 		{ name: "about" },
 		{ name: "contact" },
@@ -21,7 +20,11 @@ function App() {
 				pages={pages}
 				setCurrentPage={setCurrentPage}
 				currentPage={currentPage}></BSNav>
-			<Page currentPage={currentPage}></Page>
+			<Page
+				currentPage={currentPage}
+				setCurrentPage={
+					currentPage.name === "resume" ? setCurrentPage : null
+				}></Page>
 			<Footer />
 		</div>
 	);
