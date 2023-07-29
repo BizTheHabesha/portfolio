@@ -10,17 +10,19 @@ import {
 import { BsDownload } from "react-icons/bs";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
-function Resume() {
+function Resume(props) {
+	const { setCurrentPage } = props;
 	return (
 		<Container className="mt-4 border border-secondary-subtle">
 			<Accordion
 				className="mx-1"
 				defaultActiveKey={["0", "1", "2", "3", "4"]}
 				flush>
-				<div className="mt-2 d-flex justify-content-between">
+				<div className="mt-2 d-flex align-items-end justify-content-between">
 					<h1>Bisrat Gebrekidan</h1>
 					<h3>Full-stack Developer</h3>
 				</div>
+
 				<Accordion.Item eventKey="0">
 					<Accordion.Header>Education</Accordion.Header>
 					<Accordion.Body>
@@ -103,6 +105,7 @@ function Resume() {
 						</Stack>
 					</Accordion.Body>
 				</Accordion.Item>
+
 				<Accordion.Item eventKey="1">
 					<Accordion.Header>Skills</Accordion.Header>
 					<Accordion.Body>
@@ -163,6 +166,7 @@ function Resume() {
 						</Stack>
 					</Accordion.Body>
 				</Accordion.Item>
+
 				<Accordion.Item eventKey="2">
 					<Accordion.Header>Projects</Accordion.Header>
 					<Accordion.Body className="d-flex">
@@ -171,6 +175,7 @@ function Resume() {
 						</Button>
 					</Accordion.Body>
 				</Accordion.Item>
+
 				<Accordion.Item eventKey="3">
 					<Accordion.Header>Honors and Awards</Accordion.Header>
 					<Accordion.Body>
@@ -194,6 +199,7 @@ function Resume() {
 						</Stack>
 					</Accordion.Body>
 				</Accordion.Item>
+
 				<Accordion.Item eventKey="4">
 					<Accordion.Header>Volunteer Experience</Accordion.Header>
 					<Accordion.Body>
@@ -217,7 +223,9 @@ function Resume() {
 					</Accordion.Body>
 				</Accordion.Item>
 			</Accordion>
+
 			<hr className="mt-1" />
+
 			<Container className=" mb-3 d-flex justify-content-center">
 				<Button
 					as="a"
