@@ -53,21 +53,32 @@ function About() {
 								mature in both studies and myself, I countied to
 								carry that sentiment throughout my work.
 							</p>
-							<h2 className="fw-bolder mb-4 mt-5">
+							<hr />
+							<h2 className="fw-bolder mb-4 mt-2">
 								An Ode to Good News
 							</h2>
 							<p className="fs-5 mb-4">
-								By the time I made to university, I had already
-								dipped my hand in formal game design. I learned
-								C# with Unity.
+								By the end of highschool I had dipped my hand in
+								Unity an C#, which eventually led me to formal
+								computer science.
 							</p>
 							<p className="fs-5 mb-4">
-								Venus has a runaway greenhouse effect. I kind of
-								want to know what happened there because we're
-								twirling knobs here on Earth without knowing the
-								consequences of it. Mars once had running water.
-								It's bone dry today. Something bad happened
-								there as well.
+								Through all this time I had no idea the career
+								viabilty of computer science. It wasn't until
+								most of my friends starting delcaring it as
+								their major that I realized I should consider
+								it. I spent the entirety of my highschool senior
+								year cramming as much knowledge as I could. At
+								first it was so I could prepare myself to
+								declare computer science as my major, but
+								eventually I just couldn't stop.
+							</p>
+							<p className="fs-5 mb-4">
+								At the time of writing, I'm still finishing up
+								my bachelors and completing a bootcamp
+								certificate. Through every project, assignment,
+								and lecture, I have found myself figuring out
+								how I could use to benefit the user.
 							</p>
 						</section>
 					</article>
