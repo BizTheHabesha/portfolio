@@ -5,8 +5,10 @@
   "main": "index.js",
   "author": "BizTheHabesha",
   "license": "BSD-3-Clause",
+  "homepage": "https://BizTheHabesha.github.io/portfolio",
   "dependencies": {
     "bootstrap": "^5.3.0",
+    "gh-pages": "^5.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^16.13.1",
@@ -14,6 +16,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
