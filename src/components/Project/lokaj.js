@@ -10,8 +10,9 @@ function Project(props) {
 			active
 			key={uuid()}
 			github="https://github.com/BizTheHabesha/lokaj"
+			deploy="https://lokaj-26931e88545d.herokuapp.com/"
 			badges={["WIP", "MERN", "React", "Express", "MongoDB"]}
-			img="https://placehold.co/256x256">
+			img="img/logo.svg">
 			<Card.Body>
 				<Card.Title>
 					Lokaj Valet <Badge bg="info">New</Badge>{" "}
